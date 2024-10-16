@@ -20,13 +20,14 @@ class Point {
 class Shap {
   Point rightTop;
   Point leftBottom;
+  
 
   Shap(this.rightTop, this.leftBottom);
-  int width() {
+  get width {
     return (rightTop.x - leftBottom.x).abs();
   }
 
-  int height() {
+ get height {
     return (rightTop.y - leftBottom.y).abs();
   }
 
@@ -37,7 +38,7 @@ class Shap {
 }
 
 void main() {
-  Shap XY = Shap(Point(1, 2), Point(4, 6));
+  Shap XY = Shap(Point(1, 2), Point(4, 6)) ; 
   print(XY);
   print(XY.width());
   print(XY.height());
